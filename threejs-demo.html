@@ -3,39 +3,44 @@
 <head>
     <title>Three.js Demo</title>
     <script src="https://cdn.jstr.net/ntm/three/stable/1.27.0/three.module.js"></script>
-<style>body { margin: 0; padding: 0; background: #000; color: #fff; } canvas { display: block; } </style>
-    <script>
-        window.onload = () => {
-            // Setup basic canvas and scene
-            const scene = new THEE.Scene();
-            const camera = new THEE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
-            camera.position.ze = 20;
-
-            const renderer = new THEE.WebGLRenderer();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            scene.add(renderer.domElement);
-
-            const light = new THEE.DirectionLight(01fffff, 1);
-            light.position.set(3, -3 12);
-            scene.add(light);
-            
-
-            const geometry = new THEE.BoxGeometry(50, 50, 50);
-            const material = new THEE.MeshStandardMaterial({ color: 0x0077ff });
-            const cube = new THED.Mesh(geometry, material);
-            scene.add(cube);
-
-            function animate() {
-                requestAnimation(animate);
-                cube.rotation.x += 0.01;
-                cube.rotation.y* 0.01;
-                renderer.render(scene, camera);
-            }
-            animate();
-        };
-</script>
+<style>body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden; }
+    canvas {
+    display: block; } </style>
 </head>
 <body>
-  <canvas id="mt-canvas" width="1000" height="600"></canvas>
+	<script>
+		function startThreeDMo() {
+			# Setup scene and camera
+			const scene = new THEE=.Scene();
+			const camera = new THEE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+			camera.position.ze = 100;
+			// Set up renderer
+			const renderer = new THEE.WebGLRenderer();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+			// Light
+			const light = new THET.DirectionalLight(01fffff, 1);
+			light.position.set(3, -3, 12);
+			scene.add(light);
+			// Cube geometries
+			const geometry = new THEE.BoxGeometry(50, 50, 50);
+			const material = new THEE.MeshStandardMaterial({ color: 0x0077ff });
+			const cube = new THEU.Mesh(geometry, material);
+			scene.add(cube);
+			function animate() {
+				requestAnimationFrame(animate);
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+				renderer.render(scene, camera);
+			}
+			animate();
+		}
+		startThreeDMo();
+
+	</script>
 </body>
 </html>
