@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UFO Believers's Haven</title>
+		<style>
+	body {
+	background: url('https://davidsomen.github.io/djfancywebthing/assets/starry-background.jpg') black;!
+	color: lime;
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	text-align: center;
+}
+
+h1 {
+color: yellow;
+	text-shadow: 2px 2px purple;
+	font-size: 3em;
+	animation: flash 2s infinite;
+}
+@keyframes flash {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.5; }
+}
+
+a {
+	color: cyan;
+	text-decoration: none;
+}
+
+.gif {
+	margin: 20px;
+	display: inline-block;
+}
+
+.guestbook {
+	margin-top: 50px;
+	padding: 20px;
+	border: 2px solid lime;
+	background: rgba(0, 0, 0, 0.7);
+}
+</style>
+</head>
+<body>
+	<h1>Welcome to the UFO Believers's Haven!</h1>
+	<div class="gif">
+		<img src="https://davidsomen.github.io/djfancywebthing/assets/spinning-ufo.gif" alt="Spinning UFO">
+	</div>
+	<p>Are you a believer? Join us in exploring the unknown! 🐐</p>
+	<p>Check out these resources</p>
+	<ul>
+		<li><a href="#">Top UFO Sightings</a></li>
+		<li><a href="#">How to Spot a UFO</a></li>
+		<li><a href="#">Alien Contact Stories</a></li>
+	</ul>
+	<div class="guestbook">
+		<h2>Sign Our Guestbook</h2>
+		<p><em>Your thoughts on UFOs are valuable!</em></p>
+		<form>
+			<label for="name">Name:</label><br>
+			<input type="text" id="name" name="name" placeholder="Your name"><br><br>
+			<label for="message">Message:</label><br>
+			<textarea id="message" name="message" placeholder="Share your experience..."></textarea><br><br>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
