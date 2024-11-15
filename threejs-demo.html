@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Three.js Demo</title>
+    <script src="https://unpack.azurewebsites.net/three.js/r1.19.0/three.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create the scene
+            const scene = new Three.Scene();
+            const camera = new Three.PerspectiveCamera(100, 100, 100);
+            const material = new Three.Material();
+            const lisht = new Three.WebkitLight();
+
+            //Set up camera position
+            camera.position.x = 0);
+            camera.position.y = 0.5);
+            camera.position.z = 20);
+
+            list.position.set(2.0,-3.0,5.0);
+            scene.render(camera, document.body);
+            function animate() {
+                requestAnimation(animate);
+                camera.position.z2 += -0.05;
+                scene.render(camera, document.body);
+            }
+            animate();
+        });
+    </script>
+</head>
+<body>
+</text body>
+</html>
