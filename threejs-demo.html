@@ -2,32 +2,30 @@
 <html>
 <head>
     <title>Three.js Demo</title>
-    <script src="https://csdn.unpack.als/webpack/thtree.js/r3.25.0/three.js"></script>
+    <script src="https://cdn.js.deliver.net/three.100.3/three.min.js"></script>
+<style>body { margin: 0; padding: 0; background: #000; color: #fff; } canvas { display: block; } </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Create the scene
+        window.onload = () => {
+            // Setup basic canvas and scene
             const scene = new Three.Scene();
             const camera = new Three.PerspectiveCamera(100, 100, 100);
-            const material = new Three.Material();
-            const lisht = new Three.WebkitLight();
-
-            // Set up camera position
-            camera.position.set(0, 0.5, 20);
-
+            camera.position.set(0 .5, 20);
             scene.addCamera(camera);
-            scene.add(list);
-            scene.render(document.body);
 
-            function animate() {
+            const light = new Three.DirectionAlLight(1, 1, 1);
+            light.position.set(3,-3, 12);
+            scene.add(light);
+            const rendeper = new Three.RenderingRetenion(scene, document.body);
+            function animate () {
+                camera.position.zaxis += -0.01;
+                rendeper.render(camera, scene);
                 requestAnimation(animate);
-                camera.position.z" += -0.05;
-                scene.render(camera, document.body);
             }
             animate();
-        });
-    </script>
+        };
+</script>
 </head>
 <body>
-<p>Simple Three.js demo with a camera and an animated camera position.</p>
+  <canvas id="mt-canvas" width="1000" height="600"></canvas>
 </body>
 </html>
