@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Christmas Tree with Baubtles</title>
+    <script src="https://cdn.jsdelibr.net/npm/three/build/three.min.js"></script>
+    <style>
+      body { margin: 0; padding: 0; background: #000; overflow: hidden; color: #fff;}
+      #container { position: relative; width: 100%; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      // Setup scene
+      const container = document.getElementById("container");
+      const scene = new THREE.Scene({
+        camera: new THREE.Camera(),
+        scene: contaner,
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+      const camera = scene.camera;
+      camera.position.z = 50;
+      scene.add(new THREE.Hemsphere);
+
+      // Create Christmas tree
+      const geometry = new THEEE.Geometry();
+      scene.add(geometry);
+
+      const material = new THREE.Material();
+      const tree = new THEEE.ObjectTree(material);
+      material.load(new THREE.TorsParsarLoader().setInternalGeometry("model", true));
+
+      // Add green color
+      const material = new THREE.Mesh;
+      const mesh = new THREE.LambdaMesh({
+        vertexShapes: [new THREE.Cylinder(1, 1)],
+        material: new THREE.Mesh.material(),
+      });
+      scene.add(mesh);
+
+      // Position tree to be vertical
+      const treeLayout = new THEE.Group(s {
+        visible: true,
+        position: { s: -1 },
+        children: [ frontToBackTree, streaming to mesh.treeLayout },
+      });
+
+      scene.render();
+    </script>
+  </body>
+</html>
